@@ -1,9 +1,9 @@
 ---
 languages:
-- csharp
+  - csharp
 products:
-- azure
-- azure-storage
+  - azure
+  - azure-storage
 page_type: sample
 ---
 
@@ -14,6 +14,7 @@ This sample application creates a web photo gallery that allows you to host and 
 ![Azure Blob Storage Photo Gallery Web Application Sample .NET](./images/photo-gallery.png)
 
 ## Technologies used
+
 - ASP.NET MVC 5
 - .NET 4.5
 - Azure Storage emulator
@@ -23,9 +24,11 @@ This sample application creates a web photo gallery that allows you to host and 
 Azure Blob Storage Photo Gallery Web Application using ASP.NET MVC 5. The sample uses the .NET 4.5 asynchronous programming model to demonstrate how to call the Storage Service using the Storage .NET client library's asynchronous APIs.
 
 ## Running this sample
+
 1. Before you can run this sample, you must have the following prerequisites:
-	- The Azure Storage Emulator, which you can download [here](https://go.microsoft.com/fwlink/?linkid=717179&clcid=0x409). You can also read more about [Using the Azure Storage emulator for development](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator).
-	- Visual Studio 2015 or Visual Studio 2017.
+
+   - The Azure Storage Emulator, which you can download [here](https://go.microsoft.com/fwlink/?linkid=717179&clcid=0x409). You can also read more about [Using the Azure Storage emulator for development](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator).
+   - Visual Studio 2015 or Visual Studio 2017.
 
 2. Open the Azure Storage emulator. Once the emulator is running it will be able to process the images from the application.
 
@@ -43,7 +46,7 @@ Azure Blob Storage Photo Gallery Web Application using ASP.NET MVC 5. The sample
 
 2. Retrieve the STORAGE ACCOUNT NAME and PRIMARY ACCESS KEY (or SECONDARY ACCESS KEY) values from the Keys blade of your Storage account in the Azure Preview portal. For more information on obtaining keys for your Storage account refer to [View, copy, and regenerate storage access keys](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/#view-copy-and-regenerate-storage-access-keys)
 
-2. In the **Web.config** file, located in the project root, find the **StorageConnectionString** app setting and replace the placeholder values with the values obtained for your account.
+3. In the **Web.config** file, located in the project root, find the **StorageConnectionString** app setting and replace the placeholder values with the values obtained for your account.
 
   <add key="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=[Enter Your Storage AccountName];AccountKey=[Enter Your Storage AccountKey]" />
 
@@ -60,12 +63,22 @@ Azure Blob Storage Photo Gallery Web Application using ASP.NET MVC 5. The sample
 For additional ways to deploy this web application to Azure, please refer to the [Deploy a web app in Azure App Service](https://azure.microsoft.com/en-us/documentation/articles/web-sites-deploy/) article which includes information on using Azure Resource Manager (ARM) Templates, Git, MsBuild, PowerShell, Web Deploy, and many more.
 
 ## About the code
+
 The code included in this sample is meant to be a quick start sample for learning about Azure Web Apps and Azure Storage. It is not intended to be a set of best practices on how to build scalable enterprise grade web applications.
 
 ## More information
+
 - [What is a Storage Account](http://azure.microsoft.com/en-us/documentation/articles/storage-whatis-account/)
 - [Getting Started with Blobs](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-blobs/)
 - [Blob Service Concepts](http://msdn.microsoft.com/en-us/library/dd179376.aspx)
 - [Blob Service REST API](http://msdn.microsoft.com/en-us/library/dd135733.aspx)
 - [Blob Service C# API](http://go.microsoft.com/fwlink/?LinkID=398944)
 - [Delegating Access with Shared Access Signatures](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+
+---
+
+```bash
+
+Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+
+```
